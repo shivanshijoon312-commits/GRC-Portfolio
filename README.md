@@ -4,7 +4,7 @@ grc, essential-eight and nist
 
 **Graduate GRC / SOC Analyst** · Australia · Open to on-site, hybrid and remote roles
 
-[LinkedIn](https://www.linkedin.com/in/shivanshi-joon-789153372) · [TryHackMe](https://tryhackme.com/p/shivi312joon) · Email: `your.email@example.com` · [Resume (PDF)](assets/Shivanshi_Joon_Resume.pdf)
+[LinkedIn](https://www.linkedin.com/in/shivanshi-joon-789153372) · [TryHackMe](https://tryhackme.com/p/shivi312joon) · Email: `shivanshijoon312@gmail.com` · [Resume (PDF)](assets/Shivanshi_Joon_Resume.pdf)
 
 ---
 
@@ -49,7 +49,7 @@ I want risk work to be useful to the people who have to act on it. Every finding
 
 ## Hands-On Security Skills
 
-**TryHackMe:** Platinum league (top 15%), 35+ rooms completed, working through the SOC Level 1 path
+**TryHackMe:** Platinum league (top 9%), 35+ rooms completed, working through the SOC Level 1 path
 - SOC L1 Alert Triage
 - AI Security Certificate
 - Linux fundamentals badge (`cat linux.txt`)
