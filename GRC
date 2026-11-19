@@ -1,0 +1,349 @@
+Put your resume here as Shivanshi_Joon_Resume.pdf
+
+# Shivanshi (Shivi) Joon — GRC & SOC Analyst Portfolio
+
+**Graduate GRC / SOC Analyst** · Australia · Open to on-site, hybrid and remote roles
+
+[LinkedIn](https://www.linkedin.com/in/shivanshi-joon-789153372) · [TryHackMe](https://tryhackme.com/p/shivi312joon) · Email: `your.email@example.com` · [Resume (PDF)](assets/Shivanshi_Joon_Resume.pdf)
+
+---
+
+## Summary
+
+I'm a Master of Cybersecurity (Artificial Intelligence) graduate from La Trobe University, currently completing a Professional Year in Cyber Security with Performance Education. I also hold a Master of Computer Applications and a Bachelor of Science, so I come to security with a solid technical base.
+
+My focus is **data privacy, risk analysis and reporting**. I work with NIST frameworks (RMF and CSF), the ASD Essential Eight, ISO 27001 and the Australian Privacy Act. On the operations side, I've done hands-on SOC training: alert triage, log analysis and EDR.
+
+I want risk work to be useful to the people who have to act on it. Every finding should have a clear owner, a realistic fix and a plain-English explanation of why it matters.
+
+---
+
+## Contents
+
+- [Practice Case Study: Northside Allied Health](#practice-case-study-northside-allied-health)
+- [Hands-On Security Skills](#hands-on-security-skills)
+- [Education & Certifications](#education--certifications)
+- [Skills](#skills)
+- [Transferable Experience](#transferable-experience)
+
+---
+
+## Practice Case Study: Northside Allied Health
+
+> **Note:** This is a **self-directed practice exercise** built on a **fictional organisation**. All names, systems and figures are invented. I created it to apply GRC methods end to end in a realistic Australian small-business setting.
+
+**Scenario:** Northside Allied Health is a fictional physiotherapy and allied health clinic in Melbourne with 25 staff across two sites. It holds sensitive health information about roughly 8,000 patients in a cloud practice management system and runs on Microsoft 365. It has no formal risk process, no regular backup testing, and a privacy policy that hasn't been reviewed since 2021.
+
+**Objective:** Find the clinic's biggest cyber and privacy risks, measure it against the Essential Eight (Maturity Level 1), and give the practice manager a prioritised, achievable plan.
+
+| # | Work sample | What it shows |
+|---|---|---|
+| 1 | [Risk Register](work-samples/01-risk-register.md) | Five risks scored by likelihood × consequence, with existing controls, treatments, owners and a heat map |
+| 2 | [Essential Eight Gap Assessment](work-samples/02-essential-eight-gap-assessment.md) | All eight strategies assessed against ML1, with evidence expected, the gap observed and a recommendation |
+| 3 | [Privacy Policy Review](work-samples/03-privacy-policy-review.md) | Policy checked against the Australian Privacy Principles and the Notifiable Data Breaches scheme |
+| 4 | [Audit-Style Finding](work-samples/04-audit-finding.md) | One High-rated finding written as Condition / Criteria / Cause / Risk / Recommendation |
+
+**Frameworks applied:** NIST CSF 2.0 (functions and categories) · ASD Essential Eight ML1 · Privacy Act 1988 (APPs & NDB scheme) · NIST RMF concepts (categorise → monitor)
+
+---
+
+## Hands-On Security Skills
+
+**TryHackMe:** Platinum league (top 15%), 35+ rooms completed, working through the SOC Level 1 path
+- SOC L1 Alert Triage
+- AI Security Certificate
+- Linux fundamentals badge (`cat linux.txt`)
+
+**University labs (La Trobe):**
+- CrowdStrike Falcon EDR
+- FortiGate SSL/TLS inspection and IPSec VPN
+- Kerberoasting (attack and detection)
+- Zero Trust Network Access (ZTNA)
+
+**Job simulations:**
+- Telstra Cyber Security job simulation (Forage): responded to a malware attack, analysed it, applied technical mitigations and wrote an incident postmortem
+
+---
+
+## Education & Certifications
+
+**Education**
+- Master of Cybersecurity (Artificial Intelligence), La Trobe University
+- Professional Year in Cyber Security, Performance Education *(in progress)*
+- Master of Computer Applications
+- Bachelor of Science
+
+**Courses & certifications**
+- NIST Risk Management Framework (RMF) Introductory Course
+- Telstra Cyber Security Job Simulation (Forage)
+- TryHackMe AI Security Certificate
+
+---
+
+## Skills
+
+| Area | Skills |
+|---|---|
+| Governance, risk & compliance | Risk assessment and registers, gap assessments, policy review, audit-style reporting, control mapping |
+| Frameworks & regulation | NIST CSF 2.0, NIST RMF, ASD Essential Eight, ISO/IEC 27001, Privacy Act 1988 (APPs, NDB scheme) |
+| Security operations | Alert triage, log analysis, EDR (CrowdStrike Falcon), incident postmortems |
+| Network security | FortiGate, SSL/TLS inspection, IPSec VPN, Zero Trust / ZTNA |
+| Technical foundation | Linux, AI/ML (deep learning, NLP) |
+| Professional | Clear reporting, accuracy and process discipline, stakeholder communication |
+
+---
+
+## Transferable Experience
+
+My roles at **Landmark Global** (Pick Packer) and **FDM Warehousing** (Order Processor) taught me the habits GRC work depends on: data accuracy, following controlled processes, and noticing when something doesn't match. At FDM I worked daily in a Warehouse Management System, handling system data entry and inventory control. Small errors there have real downstream consequences, just like in security.
+
+---
+
+*Open to graduate SOC Analyst and GRC Analyst opportunities. Feel free to [message me on LinkedIn](https://www.linkedin.com/in/shivanshi-joon-789153372).*
+
+[Back to top](#shivanshi-shivi-joon--grc--soc-analyst-portfolio)
+
+# 02 · Essential Eight Gap Assessment (Maturity Level 1): Northside Allied Health
+
+> **Practice exercise. Fictional organisation.** All names, systems and findings are invented. Based on the ASD Essential Eight Maturity Model. Check the latest version on cyber.gov.au before reusing.
+
+[← Back to portfolio](../README.md)
+
+## Scope & approach
+
+- **Target:** Maturity Level 1 (ML1), the right starting point for a small clinic facing opportunistic, commodity attacks
+- **In scope:** 22 Windows PCs, 3 laptops, Microsoft 365 tenant, cloud practice management system (PMS)
+- **Method:** (simulated) interview with the Practice Manager and the managed IT provider, review of M365 admin settings, and a sample check of 5 PCs
+- **Status key:** ✅ Met · 🟡 Partially met · ❌ Not met
+
+## Summary
+
+| Strategy | Status | Priority |
+|---|---|---|
+| 1. Patch applications | 🟡 Partial | High |
+| 2. Patch operating systems | 🟡 Partial | High |
+| 3. Multi-factor authentication | ❌ Not met | **Critical** |
+| 4. Restrict administrative privileges | ❌ Not met | High |
+| 5. Application control | ❌ Not met | Medium |
+| 6. Restrict Microsoft Office macros | ✅ Met | — |
+| 7. User application hardening | 🟡 Partial | Medium |
+| 8. Regular backups | ❌ Not met | **Critical** |
+
+**Overall: Maturity Level 0.** One strategy meets ML1 and three partly meet it. Fixing MFA and backups first would remove the two most serious exposures.
+
+## Detailed assessment
+
+### 3. Multi-factor authentication ❌ (Critical)
+| | |
+|---|---|
+| **ML1 intent** | Stop stolen passwords alone from giving access to internet-facing services |
+| **Evidence expected** | MFA enforced (e.g. Conditional Access or Security Defaults) for all M365 users; MFA on the PMS |
+| **Observed gap** | Security Defaults turned off; 4 of 25 users have enrolled MFA voluntarily; the PMS supports MFA but it isn't enabled |
+| **Recommendation** | Turn on Security Defaults (or a Conditional Access policy) for all users; enable MFA in the PMS; brief staff before the rollout |
+| **Linked risk** | R1, R3 |
+
+### 8. Regular backups ❌ (Critical)
+| | |
+|---|---|
+| **ML1 intent** | Important data can be recovered after ransomware, deletion or failure |
+| **Evidence expected** | Backups done and kept to a defined schedule; restores tested; unprivileged accounts can't change or delete backups |
+| **Observed gap** | Monthly manual copy to one USB drive at reception; never test-restored; M365 data not backed up separately |
+| **Recommendation** | Automated daily backup of M365 and file data; a copy kept offline or immutable; documented quarterly test restores |
+| **Linked risk** | R2, R5. See [audit finding 04](04-audit-finding.md) |
+
+### 4. Restrict administrative privileges ❌ (High)
+| | |
+|---|---|
+| **ML1 intent** | Limit what an attacker can do if a user account is compromised |
+| **Evidence expected** | Staff use standard accounts day to day; admin rights only for staff who need them, through separate admin accounts |
+| **Observed gap** | All 5 sampled PCs had the daily user as local administrator; the Practice Manager's everyday M365 account is a Global Admin |
+| **Recommendation** | Remove local admin rights from staff; create separate admin accounts used only for admin tasks |
+| **Linked risk** | R2, R3 |
+
+### 1 & 2. Patch applications / operating systems 🟡 (High)
+| | |
+|---|---|
+| **ML1 intent** | Close known vulnerabilities quickly, especially on internet-facing systems |
+| **Evidence expected** | Patches for internet-facing services and common applications applied within 2 weeks (48 hours where an exploit exists); unsupported software removed |
+| **Observed gap** | Windows Update is on, but staff often defer restarts. 2 PCs were 3 months behind. One reception PC runs an unsupported PDF reader |
+| **Recommendation** | Have the MSP manage patching centrally with forced restarts out of hours; remove unsupported software; report patch status monthly |
+| **Linked risk** | R2 |
+
+### 5. Application control ❌ (Medium)
+| | |
+|---|---|
+| **Observed gap** | No application control; users can run any executable from Downloads |
+| **Recommendation** | Start with reception and shared PCs: allow only approved applications (e.g. WDAC or AppLocker, managed by the MSP) |
+
+### 7. User application hardening 🟡 (Medium)
+| | |
+|---|---|
+| **Observed gap** | Browsers up to date, but Internet Explorer 11 is still turned on and browser security settings aren't centrally managed |
+| **Recommendation** | Turn off IE11; apply baseline browser settings through Intune |
+
+### 6. Restrict Microsoft Office macros ✅
+Macros from the internet are blocked by M365 defaults, and no business process needs macros. **No action. Keep monitoring.**
+
+## Suggested roadmap
+
+| Timeframe | Actions |
+|---|---|
+| **Next 2 weeks** | MFA for M365 and the PMS · start automated backups |
+| **Within 30 days** | Remove local admin rights · managed patching · first test restore |
+| **Within 90 days** | Application control on shared PCs · browser hardening · reassess against ML1 |
+
+# 01 · Risk Register: Northside Allied Health
+
+> **Practice exercise. Fictional organisation.** All names, systems and figures are invented.
+
+[← Back to portfolio](../README.md)
+
+## Context
+
+| Item | Detail |
+|---|---|
+| Organisation | Northside Allied Health (fictional), 25 staff, 2 Melbourne clinics |
+| Key information assets | ~8,000 patient records (health information) in a cloud practice management system (PMS); Microsoft 365 email and SharePoint; card payments through an integrated terminal |
+| Legal / regulatory | Privacy Act 1988 (health information is *sensitive information*), Notifiable Data Breaches (NDB) scheme, Health Records Act 2001 (Vic) |
+| Risk owner (overall) | Practice Manager |
+| Assessment date | Practice exercise, 2026 |
+
+## Scoring method
+
+**Risk rating = Likelihood (1–5) × Consequence (1–5)**
+
+| Score | Rating | Expected response |
+|---|---|---|
+| 15–25 | **Extreme** | Treat immediately; report to owners |
+| 10–14 | **High** | Treat within 30 days |
+| 5–9 | **Medium** | Treat within 90 days |
+| 1–4 | **Low** | Accept and monitor |
+
+Likelihood: 1 Rare · 2 Unlikely · 3 Possible · 4 Likely · 5 Almost certain
+Consequence: 1 Insignificant · 2 Minor · 3 Moderate · 4 Major · 5 Severe (e.g. notifiable breach of health data, clinics unable to operate)
+
+## Register
+
+| ID | Risk | NIST CSF | Existing controls | L | C | Inherent | Recommended treatment | Owner | Target (residual) |
+|---|---|---|---|---|---|---|---|---|---|
+| R1 | **Phishing leads to compromised M365 account**: an attacker reads patient emails and uses the account to send invoice fraud | PR.AA, PR.AT | Default spam filtering; no phishing training | 4 | 4 | **16 Extreme** | Enforce MFA for all M365 accounts; quarterly phishing awareness session; turn on external-sender tagging | Practice Manager | L2 × C4 = 8 Medium |
+| R2 | **Ransomware encrypts clinic PCs and file shares**, stopping bookings and billing | PR.PS, RC.RP | Consumer antivirus on PCs; patches applied "when prompted" | 3 | 5 | **15 Extreme** | Centrally managed patching (Essential Eight ML1); application control on reception PCs; tested offline backups (see R5) | IT Provider (MSP) | L2 × C4 = 8 Medium |
+| R3 | **Unauthorised access to patient records** through shared or leftover PMS logins (e.g. former staff) | PR.AA | Individual logins exist, but reception shares one account; no offboarding checklist | 3 | 4 | **12 High** | Remove shared accounts; offboarding checklist with same-day access removal; quarterly user access review | Practice Manager | L1 × C4 = 4 Low |
+| R4 | **Lost or stolen laptop** used for home telehealth exposes patient data | PR.DS | Windows password only | 3 | 4 | **12 High** | BitLocker full-disk encryption; Intune remote wipe; screen-lock policy | IT Provider (MSP) | L3 × C2 = 6 Medium |
+| R5 | **Backups fail when needed**: SharePoint and local files are not recoverable after an incident | RC.RP, PR.DS | Monthly backup to a USB drive kept at reception; never test-restored | 3 | 4 | **12 High** | Automated daily backups with one copy offline/immutable; quarterly test restore with results recorded (see [finding 04](04-audit-finding.md)) | IT Provider (MSP) | L1 × C3 = 3 Low |
+
+## Heat map (inherent risk)
+
+| Likelihood ↓ / Consequence → | 1 Insignificant | 2 Minor | 3 Moderate | 4 Major | 5 Severe |
+|---|---|---|---|---|---|
+| **5 Almost certain** | | | | | |
+| **4 Likely** | | | | 🟥 R1 | |
+| **3 Possible** | | | | 🟧 R3, R4, R5 | 🟥 R2 |
+| **2 Unlikely** | | | | | |
+| **1 Rare** | | | | | |
+
+🟥 Extreme · 🟧 High
+
+## Key takeaways for the Practice Manager
+
+1. **Turn on MFA this week.** It's the cheapest, fastest control and cuts the top-rated risk (R1) the most.
+2. **R2 and R5 are linked.** Ransomware becomes survivable once backups are automated, kept partly offline, and *proven* to restore.
+3. **Health information is sensitive under the Privacy Act.** A breach affecting patients is likely to be notifiable to the OAIC and to patients, so access control (R3) and encryption (R4) also protect the clinic's legal position.
+4. Review this register **every quarter** and after any incident or major system change.
+
+# 04 · Audit-Style Finding: Backups Not Tested
+
+> **Practice exercise. Fictional organisation.** All details are invented.
+
+[← Back to portfolio](../README.md)
+
+| Field | Detail |
+|---|---|
+| **Finding ID** | NAH-2026-01 |
+| **Title** | Backups are taken but never tested for restoration |
+| **Rating** | 🟧 **High** |
+| **Control area** | Essential Eight: Regular backups · NIST CSF 2.0: RC.RP (Incident Recovery Plan Execution), PR.DS-11 (Backups) |
+| **Owner** | IT Provider (MSP), with Practice Manager oversight |
+
+## Condition (what we found)
+
+Practice files and exported PMS reports are copied by hand to a single USB hard drive about once a month. The drive is kept in an unlocked drawer at the main clinic's reception. Staff could not remember any attempt to restore data from it, and there are no records of a test restore. Microsoft 365 data (email, SharePoint, OneDrive) isn't backed up separately.
+
+## Criteria (what should be happening)
+
+- **ASD Essential Eight, ML1:** backups of important data are done and kept according to business continuity requirements, and **restoration is tested** as part of disaster recovery exercises.
+- **Privacy Act 1988, APP 11:** take reasonable steps to protect personal information from misuse, interference and loss.
+- **Good practice (3-2-1):** three copies of data, on two types of media, with one copy offsite or offline.
+
+## Cause (why it happened)
+
+- No one has formally been made responsible for backups.
+- The backup process was set up in 2020 and hasn't been reviewed since.
+- People assumed "we have a backup" meant "we can recover".
+
+## Risk (why it matters)
+
+If ransomware, hardware failure or accidental deletion hits the clinic, it may find out *during the incident* that its backups are incomplete, damaged or up to 30 days old. The likely result is days of disruption to bookings and billing, permanent loss of clinical notes, and a possible notifiable data breach if patient records can't be accessed or restored. Having a single drive in a public area also means it could be stolen or damaged.
+
+**Linked risks:** R2 (Ransomware) and R5 (Backup failure) in the [Risk Register](01-risk-register.md).
+
+## Recommendation
+
+1. **Within 2 weeks:** formally make the MSP responsible for backups, with the Practice Manager as risk owner.
+2. **Within 30 days:** set up **automated daily backups** of file data and M365, keeping **one copy offline or immutable**.
+3. **Within 30 days:** carry out and **document a first test restore** (sample files, a mailbox and a PMS export).
+4. **Ongoing:** test restores **every quarter**, record the results, and report any failures to the Practice Manager.
+5. Move the USB drive to a locked location while the old process is phased out.
+
+## Management response (example)
+
+> *"Agreed. The MSP will start automated M365 and file backups by 15 December, with the first documented test restore by 31 December. The Practice Manager will review results quarterly."*
+
+# 03 · Privacy Policy Review: Northside Allied Health
+
+> **Practice exercise. Fictional organisation.** The policy reviewed is an invented example. This is a learning exercise, not legal advice.
+
+[← Back to portfolio](../README.md)
+
+## Document reviewed
+
+| Item | Detail |
+|---|---|
+| Document | *Northside Allied Health Privacy Policy* (fictional), v1.2 |
+| Last reviewed | March 2021 (review was due March 2023) |
+| Reviewed against | Privacy Act 1988 (Cth): Australian Privacy Principles (APPs) 1, 5, 6, 11, 12 and 13; Notifiable Data Breaches (NDB) scheme; OAIC guidance for health service providers |
+
+## Strengths
+
+- **Plain language.** Patients can read and understand it without legal training.
+- **Clear purposes of collection.** It explains why health information is collected (treatment, billing, referrals), in line with APP 1 and APP 5.
+- **Access and correction explained.** It tells patients how to request their records (APP 12 and 13).
+- **Publicly available** on the clinic's website, as APP 1.4 expects.
+
+## Gaps identified
+
+| # | Gap | Why it matters | Reference |
+|---|---|---|---|
+| G1 | **No named privacy contact.** The policy says "contact the clinic" with no role or contact details | Patients and the OAIC need a clear point of contact for questions and complaints | APP 1.4(e) |
+| G2 | **Vague security wording.** It says only that information is "stored securely" | Gives patients no real assurance and staff no standard to follow; APP 11 requires *reasonable steps* | APP 11.1 |
+| G3 | **No retention or destruction rules** | Records are kept forever by default, increasing the impact of any breach; Victorian health records rules set minimum retention periods | APP 11.2; Health Records Act 2001 (Vic) |
+| G4 | **No data breach section** | The NDB scheme requires assessing a suspected breach within 30 days and notifying the OAIC and affected individuals if it is an *eligible data breach* | Privacy Act Part IIIC |
+| G5 | **Overseas disclosure not addressed.** The cloud PMS may store data offshore | APP 1.4(f)–(g) requires stating whether information is likely to be disclosed overseas, and to which countries | APP 1.4, APP 8 |
+| G6 | **Review overdue by more than 3 years** | An out-of-date policy may not reflect current systems (e.g. telehealth, the cloud PMS) | Good governance practice |
+
+## Recommended improvements
+
+1. **Name a Privacy Officer** (e.g. the Practice Manager) with a direct email and phone number. *(G1)*
+2. **Describe security safeguards in plain terms**, such as MFA, encryption, role-based access and staff training, and link to an internal Information Security Policy. *(G2)*
+3. **Add a retention and destruction schedule** that meets Victorian health records requirements, including secure disposal methods. *(G3)*
+4. **Add a data breach response section** that explains how breaches are assessed and when patients and the OAIC will be notified, and link it to an internal Data Breach Response Plan. *(G4)*
+5. **Confirm where the PMS vendor stores data** and state any overseas disclosure. *(G5)*
+6. **Set an annual review date** and a trigger to review the policy after any new system or significant incident. *(G6)*
+
+## Priority
+
+| Priority | Items |
+|---|---|
+| High | G4 (breach response), G5 (overseas disclosure) |
+| Medium | G1, G2, G3 |
+| Low | G6 (fixed as part of this update) |
